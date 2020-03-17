@@ -1,0 +1,99 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Dec 17 15:04:53 2019
+| Host         : DESKTOP-EAQQKEN running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file seller_control_sets_placed.rpt
+| Design       : seller
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    21 |
+|    Minimum number of control sets                        |    21 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    49 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    21 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     6 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     3 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              33 |           24 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              43 |           12 |
+| Yes          | No                    | No                     |              33 |           15 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              82 |           29 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------+------------------------+----------------------+------------------+----------------+
+|             Clock Signal             |      Enable Signal     |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
++--------------------------------------+------------------------+----------------------+------------------+----------------+
+|  d/clk_reg_n_0                       | c/E[1]                 | c/SR[1]              |                1 |              1 |
+|  d/clk_reg_n_0                       | c/E[0]                 | c/SR[0]              |                1 |              2 |
+|  FSM_sequential_col_reg[2]_i_2_n_0   | i/r_tmp[3]_i_2_n_0     | i/r_tmp[3]_i_1_n_0   |                1 |              4 |
+|  FSM_sequential_state_reg[1]_i_2_n_0 | c/time_l[3]_i_1_n_0    |                      |                2 |              4 |
+|  FSM_sequential_state_reg[1]_i_2_n_0 | c/time_h[3]_i_1_n_0    |                      |                3 |              4 |
+|  d/clk_reg_n_0                       | c/E[2]                 | c/SR[2]              |                2 |              4 |
+|  FSM_sequential_col_reg[2]_i_2_n_0   | i/num[4]_i_1_n_0       |                      |                2 |              5 |
+|  FSM_sequential_state_reg[1]_i_2_n_0 |                        |                      |                4 |              6 |
+|  FSM_sequential_state_reg[1]_i_2_n_0 | c/money_l[3]_i_1_n_0   |                      |                2 |              6 |
+|  s_clk_IBUF_BUFG                     |                        |                      |                6 |              6 |
+|  FSM_sequential_col_reg[2]_i_2_n_0   | i/snum[6]_i_1_n_0      |                      |                3 |              7 |
+|  FSM_sequential_state_reg[1]_i_2_n_0 | c/inputtime[6]_i_1_n_0 |                      |                3 |              7 |
+|  d/clk_reg_n_0                       |                        |                      |                4 |              7 |
+|  FSM_sequential_col_reg[2]_i_2_n_0   | i/res                  | i/res[3]_i_1_n_0     |                5 |              8 |
+|  FSM_sequential_state_reg[1]_i_2_n_0 | c/sttime[31]_i_2_n_0   | c/sttime[13]_i_1_n_0 |                3 |              8 |
+|  s_clk_IBUF_BUFG                     |                        | d/clk                |                4 |             13 |
+|  FSM_sequential_col_reg[2]_i_2_n_0   |                        |                      |               10 |             14 |
+|  s_clk_IBUF_BUFG                     |                        | i/clk                |                4 |             15 |
+|  s_clk_IBUF_BUFG                     |                        | c/clk                |                4 |             15 |
+|  FSM_sequential_state_reg[1]_i_2_n_0 | c/sttime[31]_i_2_n_0   | c/sttime[31]_i_1_n_0 |                8 |             24 |
+|  FSM_sequential_state_reg[1]_i_2_n_0 | i/res_reg[3]_2         | c/lstime[31]_i_1_n_0 |                8 |             31 |
++--------------------------------------+------------------------+----------------------+------------------+----------------+
+
+

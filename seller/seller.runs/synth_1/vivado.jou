@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Dec 17 15:03:09 2019
+# Process ID: 15688
+# Current directory: D:/fpgaspace/seller/seller.runs/synth_1
+# Command line: vivado.exe -log seller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source seller.tcl
+# Log file: D:/fpgaspace/seller/seller.runs/synth_1/seller.vds
+# Journal file: D:/fpgaspace/seller/seller.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source seller.tcl -notrace
